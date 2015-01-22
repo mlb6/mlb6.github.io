@@ -1,0 +1,273 @@
+{
+  "name" : "Martin Le Bas",
+  "title" : "Senior Software Engineer",
+  "email" : "lebas.martin@gmail.com",
+  "twitter" : "mart1lb",
+  "linkedin" : "martinlebas",
+  "github":"mlb6",
+  "picture":"/img/5933661.jpeg",
+
+  "summary" : "<p>I’m passionate about software development, something that started well before I began my studies and my career. One of my strengths is that I am a self-directed learner: I've perfected my skills through my studies and experiences. I never shy away from new challenges.</p><p>I started my studies in Telecom and Network, but I shifted quickly to Software Development. Java technologies became my speciality and I started my career in the development of e-commerce solutions. Most of the solutions I’ve been involved in were built on top of Oracle ATG Web Commerce. As a developper I had to work on every stack of the application: from the back-end integration to the front-end development by way of third party integration.</p><p>I’ve been an IT consultant for the last seven years. Thanks to the diversity of the mandates I’ve been assigned, I've gained a lot of experience. I quickly became team leader, and also had software architecture mandates. My current experience with CGI has reinforced my knowledge of development process, particularly through the usage of agile methodologies. </p><p>During the last year, my interest in javascript development has grown. This started with a project for charter.com. We redeveloped the checkout flow of this site with AngularJS: I’ve been amazed by the way it can improve User Experience. I’ve discovered many possibilities offered by future standard (ES6 and 7) and decided to explore this subject further in my own time.</p>",
+
+  "skillCategories" : [
+    {
+      "name" : "Writing & Speaking",
+      "skills" : [
+        "Native speaker in French", "fluent in English"
+      ]
+    },
+    {
+      "name" : "Management",
+      "skills" : ["Team management", "Agile methodology", "Client support"]
+    },
+    {
+      "name" : "Client-Side development",
+      "skills" : [
+        "Javascript ES5", "ES6", "ES7", "TypeScript", "atScript",
+        "HTML 5" , "CSS",
+        {"name":"Less", "message":"Not a specialist of Less"},
+        {"name":"Sass", "message":"Not a specialist of Sass"},
+        "AngularJS", "Bootstrap","Angular Material"
+      ]
+    },
+    {
+      "name" : "Server-Side Languages",
+      "skills" : [
+         "Java J2EE", "Groovy", "PHP", "Javascript"
+      ]
+    },
+    {
+      "name" : "Server-Side Frameworks",
+      "skills" : [
+        "ATG Web Commerce","Endeca Experience Manager","Spring",
+        {"name":"Spring data", "message":"Never used in client projects"}, {"name":"Grails", "message":"Never used in client projects"}, {"name":"NodeJS", "message":"Never used in client projects"}
+      ]
+    },
+    {
+      "name" : "Build & Test tools",
+      "skills" : [
+        "Maven", "Ant", "Shell", "Gulp", "Karma", "Protractor"
+      ]
+    },
+
+    {
+      "name" : "Databases",
+      "skills" : [
+        "Oracle", "MySQL", {"name":"mongoDB", "message":"Never used in client projects"}
+      ]
+    },
+    {
+      "name" : "Servers",
+      "skills" : [
+        "Weblogic", "JBoss", "Tomcat", "Apache"
+      ]
+    },
+    {
+      "name" : "Engineering",
+      "skills" : [
+        "UML", "Design Patterns"
+      ]
+    }
+
+  ],
+
+
+  "experiences" : [
+    {
+      "period":"Sept 2011 - Now",
+      "title" : "Senior Software Engineer",
+      "company" : {
+        "name":"CGI",
+        "city":"Montréal",
+        "country":"Canada"
+      },
+      "summary":"As a Senior consultant, I've been involved as Senior Developer, Team Leader and Solution architect. I've also been involved in the recruitment process by through conducting technical interviews.",
+      "projects":[
+        {
+          "period":"Oct 2013 - Oct 2014",
+          "name":"Charter Communications",
+          "role":"Team Leader & Developer",
+          "summary":"Charter.com is an e-commerce website which differentiates itself by heavily targeting content and offers based on the customer data. I participated in this project as a Developer and as Team Leader.",
+          "achievements":[
+            "Leading technically the development of the decoupling project (AngularJS + Rest Services).",
+            "Leading the 'Existing Customer' and 'Save Cart' initiatives.",
+            "Supporting the production team after office hours.",
+            "Developing the internationalisation support.",
+            "Developing the foundation of a library to mock ATG."
+          ],
+          "technologies":["ATG Web Commerce 10.3", "AngularJS 1.2", "Bootstrap"]
+        },
+        {
+          "period":"Sept 2013 - Oct 2013",
+          "name":"Vidéotron",
+          "role":"Junior Architect",
+          "summary":"Vidéotron is a cable company in Quebec which had only a non-transactional commerce website. As an e-commerce solution architect, I participated in the definition of a target architecture for their future transactional website.",
+          "achievements":[
+            "Delivering e-commerce expertise based on their current catalog.",
+            "Evaluating the current architecture.",
+            "Delivering an architecture document targeting the future solution."
+          ]
+        },
+        {
+          "period": "May 2013 - Sept 2013",
+          "name": "CGI Federal",
+          "project": "Massachusetts HIX",
+          "role": "Team Leader",
+          "summary": "MA HIX is the Health Care system of Massachusetts State. This project belonged to CGI Federal, another division of the CGI Group. As Team Leader of the Quebec team (Montreal & Sherbrooke), we helped the Boston team in the development of the Broker portal.",
+          "achievements":[
+            "Coordinating the development with the Boston team and the other international teams.",
+            "Supporting the Quebec team.",
+            "Conducting demonstrations for the client (MA State)."
+          ],
+          "technologies":["Oracle ADF","Spring","Hibernate","Soap"]
+        },
+        {
+          "period":"Apr 2012 - May 2013",
+          "name":"Rogers Communications",
+          "project":"Rogers SSP 1012 & 413",
+          "role":"Team Leader & Developer",
+          "summary":"Rogers is a wireless & cable company in Canada. SSP is its new multi-channel e-commerce platform that aims to be used by final customers, sale representatives, and call centers. I've been involved as a Team Leader and Developer.",
+          "achievements":[
+            "Leading the Catalog and BCC customization team.",
+            "Resolving performance issues.",
+            "Designing the tool to retrieve products compatibility (Plan, Device, Add-ons).",
+            "Gathering requirements from the client.",
+            "Coordinating code deployments.",
+            "Delivering code to the client."
+          ],
+          "technologies":["Oracle ATG Web Commerce", "ATG BCC", "jQuery"]
+        },
+        {
+          "period":"Sept 2011 - Apr 2012",
+          "name":"Rogers Communications",
+          "project":"Rogers SSP 712",
+          "role":"Developer",
+          "achievements":[
+            "Estimating and Planning the development tasks based on a development 'Story'.",
+            "Developing new features.",
+            "Creating Unit tests.",
+            "Processing code analysis.",
+            "Fixing code based on code review reports."
+          ],
+          "technologies":["Oracle ATG Web Commerce", "jQuery"]
+        }
+      ]
+    },
+
+    {
+      "period":"Oct 2010 - Sept 2011",
+      "title" : "Intermediate Software Engineer",
+      "company" : {
+        "name":"Freelance",
+        "city":"Montréal",
+        "country":"Canada"
+      },
+
+      "summary":"Independent contractor working exclusively for PROGIWEB as a Software Engineer.",
+      "projects":[
+        {
+          "period":"Oct 2010 - Sept 2011",
+          "name" : "Louis Vuitton",
+          "project":"myPerso",
+          "role":"Developer",
+          "summary":"Participation in the development of a web application for in-store sales of customizable products.",
+          "technologies":["ATG Commerce 9.1", "ATG Customer Service Center"]
+        },
+        {
+          "period":"1 month",
+          "name":"PROGIWEB",
+          "project":"Quiksilver",
+          "role":"Developer",
+          "summary":"Proof of concept for the integration of an e-commerce platform (ATG) with a CMS in PHP. The integration was done using ATG Rest services",
+          "technologies":["ATG Rest API", "PHP"]
+        }
+      ]
+    },
+
+    {
+      "period":"2007 - 2010",
+      "title" : "Junior Software Engineer",
+      "company" : {
+        "name":"PROGIWEB (now Clever Age)",
+        "city":"Paris",
+        "country":"France"
+      },
+      "summary":"Continuous work as a co-op student focused on the development and improvement of large-scale e-commerce applications. This experience deepened my technical knowledge and helped develop my ability to work with dynamic teams of engineers and clients.",
+      "projects":[
+        {
+          "period":"Mar 2010 - Oct 2010",
+          "name" : "Louis Vuitton ",
+          "project":"LVM 2011",
+          "role":"Developer",
+          "summary":"Development of technical specifications and participation in the creation of the internal tools for use by the sales and order fulfilment agents.",
+          "technologies":["ATG Commerce 9.1", "ATG Customer Service Center"]
+        },
+        {
+          "name":"Aelia Duty Free",
+          "role":"Developer",
+          "summary":"Participation in the creation of the pre-sale website of Aélia Duty Free company.",
+          "technologies":["ATG Commerce", "PHP", "Joomla"]
+        },
+        {
+          "name":"m6replay.fr",
+          "role":"Developer",
+          "summary":"Application maintenance and evolution of the video-on-demand site for M6 TV channel, a principal television network in France.",
+          "technologies":["ATG Commerce 2007.1", "PL/SQL", "Javascript"]
+        },
+        {
+          "name":"vioo.com",
+          "role":"Developer",
+          "summary":"Resolution performance problems on the editorial website.",
+          "technologies":["PHP", "EzPublish", "MySQL", "Javascript"]
+        },
+        {
+          "name":"Mercedes-Benz Enterprise",
+          "role":"Developer",
+          "summary":"Design and implementation of the Mercedes-Benz Enterprise extranet.",
+          "technologies":["PHP5", "MySQL", "Javascript"]
+        },
+        {
+          "name":"PROGIWEB",
+          "role":"Developer",
+          "summary":"Set-up of a web campaign solution.",
+          "technologies":["ATG Outreach"]
+        }
+
+      ]
+    }
+
+  ],
+
+  "education" : [
+    {
+      "period": "2007 - 2010",
+      "title" : "Software & Network Engineer",
+      "school":{
+        "name":"ESIPE MLV",
+        "city":"Marne la Vallée",
+        "country":"France"
+      },
+      "summary":"Studies done in a co-op school of engineering focused on open source technologies and the development language JAVA. (Recognized by the Ordre des Ingénieurs du Québec)"
+    },
+    {
+      "period": "2006 - 2007",
+      "title" : "Bachelor of Science in Software Development",
+      "school":{
+        "name":"DkIT",
+        "city":"Dundalk",
+        "country":"Ireland"
+      },
+      "summary":"Study year as part of a European exchange program."
+    },
+    {
+      "period": "2004 - 2006",
+      "title" : "DUT in Telecom & Networks",
+      "school":{
+        "name":"University of Caen",
+        "city":"Caen",
+        "country":"France"
+      },
+      "summary":"Diploma, equivalent to the two first years of the Bachelor."
+    }
+  ]
+}

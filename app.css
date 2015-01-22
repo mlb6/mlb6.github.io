@@ -1,0 +1,124 @@
+body {
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
+}
+.layout-content {
+  max-width: 864px;
+}
+.heading .face {
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  width: 38px;
+  margin: 8px;
+}
+.heading .title{
+  margin: 8px 0px;
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: 200;
+}
+
+.heading {
+  padding: 0px 0px;
+}
+
+.md-subheader.md-indigo-theme {
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.layout-content{
+  overflow-y: visible;
+}
+
+.layout-content h2 {
+  font-size: 1.5em;
+}
+.layout-content section{
+  padding:0 16px 16px 16px;
+
+  #background: #f7f7f7;
+}
+.skillsSection table {
+  margin-top: 16px;
+  border-collapse: collapse;
+}
+
+.skillsSection th {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: left;
+
+}
+.skillsSection .divider {
+  border-top: 1px rgba(0, 0, 0, 0.12) solid;
+}
+
+.summary p {
+  text-align: justify;
+  margin: 12px 0;
+}
+
+.education .location,
+.experience .location{
+  font-size:12px;
+}
+.education .location span,
+.experience .location span{
+  text-align: right;
+}
+
+.education .period,
+.experience .period{
+  font-size:12px;
+}
+.education h4,
+.experience  h4{
+  margin: 16px 0px 5px 0;
+}
+.education .summary,
+.experience  .summary{
+  margin: 5px 0px;
+}
+.experience .projects{
+  margin: 5px 8px;
+}
+.experience .project{
+  margin: 5px 0px;
+  padding: 10px 10px;
+}
+.experience .project .summary,
+.experience .project ul{
+  margin: 5px 0px;
+}
+
+.experience .project  p {
+  line-height: 1.25;
+}
+
+.page-break	{
+  display: none;
+}
+.fullHeight {
+  height: 100%;
+}
+
+@media print {
+  .hide-print{
+    display:none;
+  }
+  .page-break	{
+    display: block; page-break-before: always;
+  }
+  .fullHeight {
+    height: auto;
+  }
+  .heading {
+    color:rgb(63, 81, 181);
+  }
+  .md-whiteframe-z1{
+    box-shadow:none;
+    border: 1px rgba(0, 0, 0, 0.12) solid;
+  }
+}

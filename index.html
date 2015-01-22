@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html ng-app="CvApp" ng-controller="MainController as main" ng-cloak="" >
+  <head>
+      <title>{{main.cv.name}} - {{main.cv.title}}</title>
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+      <style>
+        md-toolbar.ng-hide,
+        .ng-hide{
+          display:none;
+        }
+      </style>
+      <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css" />
+      <link rel="stylesheet" href="/bower_components/angular-material/themes/indigo-theme.css" />
+      <link rel="stylesheet" href="/app.css" />
+
+  </head>
+  <body>
+    <div layout="row" layout-fill layout-align="center center" class="hide-print" ng-hide="main.ready">
+      <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </div>
+
+    <md-toolbar layout="row" class="ng-hide" ng-show="main.ready">
+      <div class="md-toolbar-tools heading" layout="row" layout-sm="column">
+        <img ng-src="{{main.cv.picture}}" class="face hide-print" alt="{{main.cv.name}}">
+        <h1>{{main.cv.name}}</h1><span class="title" flex>{{main.cv.title}}</span>
+      </div>
+      <div flex></div>
+      <md-button ng-click="main.toggleContact()" hide-gt-sm class="hide-print"  style="height: 64px;">
+        <md-icon icon="img/icons/ic_menu_24px.svg" aria-label="Contact" ></md-icon>
+      </md-button>
+      <div layout="row" layout-align="center center" hide-sm class="hide-print" style="height: 64px;">
+        <md-button ng-href="mailto:{{main.cv.email}}" target="_blank" aria-label="E-mail" > <md-icon icon="img/icons/email.svg"  ></md-icon></md-button>
+        <md-button ng-href="//twitter.com/{{main.cv.twitter}}" target="_blank" aria-label="Twitter" ><md-icon icon="img/icons/twitter.svg"  ></md-icon></md-button>
+        <md-button ng-href="//ca.linkedin.com/in/{{main.cv.linkedin}}" target="_blank" aria-label="Linkedin" ><md-icon icon="img/icons/linkedin.svg" ></md-icon></md-button>
+        <md-button ng-href="//github.com/{{main.cv.github}}" target="_blank" aria-label="Github" ><md-icon icon="img/icons/github-circle.svg"  ></md-icon></md-button>
+      </div>
+    </md-toolbar>
+
+<div class="fullHeight">
+
+    <md-content class="ng-hide fullHeight" layout="column" layout-fill md-scroll-y  ng-show="main.ready" >
+      <div class="layout-content">
+        <section>
+          <md-subheader class="md-primary">
+            Summary
+          </md-subheader>
+          <div class="summary" ng-bind-html="main.cv.summary"></div>
+        </section>
+
+        <section class="skillsSection">
+          <md-subheader class="md-primary">
+            Skills
+          </md-subheader>
+          <table>
+            <tr class="skill-categories" ng-repeat="category in main.cv.skillCategories" ng-class="{'divider':!$first}">
+              <th class="skills"  ng-hide="category.skills.length==0">
+                {{category.name}}:
+              </th>
+              <td  ng-hide="category.skills.length==0">
+                <span class="skill" ng-repeat="skill in category.skills">
+                  <span ng-if="!skill.name">{{skill}}</span><span ng-if="skill.name"><md-tooltip>
+                  {{skill.message}}
+                </md-tooltip>{{skill.name}}</span><span ng-if="!$last">,</span><span ng-if="$last">.</span>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </section>
+        <div class="page-break"></div>
+        <section>
+          <md-subheader class="md-primary">
+            Experience
+          </md-subheader>
+          <md-list class="experiences" >
+            <md-item class="experience" ng-repeat="experience in main.cv.experiences">
+              <div>
+
+                <div layout-fill>
+                  <h4 layout="row" >
+                    <span layout="column" layout-align="start start">
+                      <span class="company">{{experience.company.name}}</span>
+                      <span class="location">{{experience.company.city}}, {{experience.company.country}}</span>
+                    </span>
+                    <span flex></span>
+                    <span layout="column" layout-align="start end">
+                      <span>{{experience.title}}</span>
+                      <span class="period">{{experience.period}}</span>
+                    </span>
+                  </h4>
+
+                  <p class="summary">
+                    {{experience.summary}}
+                  </p>
+
+                  <md-list class="projects" layout="column" ng-hide="experience.projects.length==0">
+                    <md-item class="project md-whiteframe-z1" ng-repeat="project in experience.projects">
+                      <div layout="column" layout-fill layout-align="start start">
+
+                        <h5 layout="row" layout-fill>
+                          <span layout="column" layout-align="start start">
+                            <span>{{project.name}}</span>
+                            <span ng-if="project.project">{{project.project}}</span>
+                          </span>
+                          <span flex></span>
+                          <span layout="column" layout-align="start end">
+                            <span class="role">{{project.role}}</span>
+                            <span class="period" ng-if="project.period">{{project.period}}</span>
+                          </span>
+                        </h5>
+
+                        <div layout="column">
+                          <p class="summary">
+                            {{project.summary}}
+                          </p>
+
+                          <ul class="achievements">
+                            <li class="achievement" ng-repeat="achievement in project.achievements">
+                              {{achievement}}
+                            </li>
+                          </ul>
+
+                          <div class="technologies" ng-hide="!project.technologies">
+                            Technologies involved :
+                            <span class="technology" ng-repeat="technology in project.technologies">
+                              {{technology}}<span ng-if="!$last">,</span><span ng-if="$last">.</span>
+                            </span>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </md-item>
+                  </md-list>
+                </div>
+              </div>
+              <md-divider  ng-if="!$last"></md-divider>
+            </md-item>
+          </md-list>
+        </section>
+
+
+
+        <section class="educationSection">
+          <md-subheader class="md-primary">
+            Education
+          </md-subheader>
+          <md-list class="educations" >
+            <md-item class="education" ng-repeat="education in main.cv.education">
+              <div>
+
+                <div layout-fill>
+                  <h4 layout="row" >
+                    <span layout="column" layout-align="start start">
+                      <span class="school">{{education.school.name}}</span>
+                      <span class="location">{{education.school.city}}, {{education.school.country}}</span>
+                    </span>
+                    <span flex></span>
+                    <span layout="column" layout-align="start end">
+                      <span>{{education.title}}</span>
+                      <span class="period">{{education.period}}</span>
+                    </span>
+                  </h4>
+
+                  <p class="summary">
+                    {{education.summary}}
+                  </p>
+
+                </div>
+              </div>
+              <md-divider  ng-if="!$last"></md-divider>
+            </md-item>
+          </md-list>
+        </section>
+        <div style="height:64px;" class="hide-print"></div>
+      </div>
+    </md-content>
+</div>
+
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2 ng-hide" ng-show="main.ready" md-component-id="contact" flex="20">
+      <md-content layout="column" layout-fill layout-align="space-around center" class="md-default-theme" >
+        <md-button ng-href="mailto:{{main.cv.email}}" target="_blank" class="md-fab md-primary" aria-label="E-mail"> <md-icon icon="img/icons/email.svg" ></md-icon></md-button>
+        <md-button ng-href="//twitter.com/{{main.cv.twitter}}" target="_blank" class="md-fab md-primary" aria-label="Twitter"><md-icon icon="img/icons/twitter.svg" ></md-icon></md-button>
+        <md-button ng-href="//ca.linkedin.com/in/{{main.cv.linkedin}}" target="_blank" class="md-fab md-primary" aria-label="Linkedin"><md-icon icon="img/icons/linkedin.svg" ></md-icon></md-button>
+        <md-button ng-href="//github.com/{{main.cv.github}}" target="_blank" class="md-fab md-primary" aria-label="Github"><md-icon icon="img/icons/github-circle.svg" ></md-icon></md-button>
+      </md-content>
+    </md-sidenav>
+
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/hammerjs/hammer.min.js"></script>
+    <script src="/bower_components/angular-material/angular-material.min.js"></script>
+    <script src="app.js"></script>
+
+  </body>
+</html>
