@@ -47,7 +47,7 @@
           </md-subheader>
           <div class="summary" ng-bind-html="main.cv.summary"></div>
         </section>
-
+        <div class="page-break"></div>
         <section class="skillsSection">
           <md-subheader class="md-primary">
             Skills
@@ -74,6 +74,7 @@
           </md-subheader>
           <md-list class="experiences" >
             <md-item class="experience" ng-repeat="experience in main.cv.experiences">
+              <div ng-if="!$first" class="page-break"></div>
               <div>
 
                 <div layout-fill>
@@ -139,8 +140,7 @@
           </md-list>
         </section>
 
-
-
+        <div class="page-break"></div>
         <section class="educationSection">
           <md-subheader class="md-primary">
             Education
