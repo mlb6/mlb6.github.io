@@ -1,1 +1,1 @@
-[Martin Le Bas CV](http://mlb6.github.io/index.html)
+[CV - Martin Le Bas](http://martin.le-bas.org/)
